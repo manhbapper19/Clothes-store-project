@@ -3,6 +3,8 @@ const hot = document.getElementById("hot");
 const new_pd = document.querySelector("#new-pd");
 const hot_pd = document.querySelector("#hot-pd");
 
+
+
 newly.addEventListener("click", (e) => {
   e.preventDefault();
   console.log("clicked newly");
@@ -24,6 +26,26 @@ hot.addEventListener("click", (e) => {
   hot_pd.style.display = "grid";
   new_pd.style.display = "none";
 });
+const products = [
+    {
+        "id": "17",
+        "name": "Áo ba lỗ",
+        "descibe": "Áo ba lỗ thể thao, thích hợp cho việc vận động mạnh",
+        "price":"199.000vnd"
+    },
+    {
+        "id": "12",
+        "name": "Áo thun nam",
+        "descibe": "Áo thoáng mát, phù hợp cho những người thích vận động nhưng vẫn có cá tính",
+        "price":"199.000vnd"
+    },
+    {
+        "id": "14",
+        "name": "Áo polo trắng",
+        "descibe": "Áo thoáng mát, phù hợp cho những doanh nhân trẻ",
+        "price":"199.000vnd"
+    },
+];
 const show = document.querySelectorAll("main");
 console.log(show);
 const image_click = document.querySelectorAll(".products-item__img");
@@ -32,11 +54,15 @@ image_click.forEach((image) => {
   image.addEventListener("click", function () {
     const value = this.getAttribute("data-value");
     console.log("Clicked image value:", value);
-    const u = Insertproduct();
+    const index = products.findIndex(product => product.id === value);
+    console.log(index);
+    if(index!==-1){
+    const u = Insertproduct(index);
     show[0].style.display = "none";
     console.log(u);
     show[1].innerHTML = u;
     show[1].style.display = "flex";
+    }
   });
 });
 show[1].addEventListener('click', function(event) {
@@ -46,12 +72,12 @@ show[1].addEventListener('click', function(event) {
         show[2].style.display = "none";
     }
 });
-function Insertproduct() {
-  const a = `<div class="product_warper">
+function Insertproduct(index) {
+    return  `<div class="product_warper">
             <button class="close-btn" id="close-btn"><i class="fa-solid fa-x"></i></button>
             <div class="container2">
                 <div class="imgBx">
-                    <img src="assets/img/23CMAW.TT004.3D.1_15.jpg">
+                    <img src="assets/img/cool/p (${products[index].id}).jpg">
                 </div>
                 <div class="details">
                     <div class="content">
@@ -59,17 +85,12 @@ function Insertproduct() {
                             <span>Running Collection</span>
                         </h2>
                         <p>
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                        ${products[index].descibe}
                         </p>
-                        <h3>140.000đ</h3>
+                        <h3>${products[index].price}</h3>
                         <button>Mua</button>
                     </div>
                 </div>
             </div>
         </div>`;
-  return a;
 }
