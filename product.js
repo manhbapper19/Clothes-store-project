@@ -1,32 +1,3 @@
-const newly = document.getElementById("new");
-const hot = document.getElementById("hot");
-const new_pd = document.querySelector("#new-pd");
-const hot_pd = document.querySelector("#hot-pd");
-
-
-
-newly.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log("clicked newly");
-  newly.classList.remove("homepage-products_tab-item");
-  newly.classList.add("homepage-products_tab-item-active");
-  hot.classList.remove("homepage-products_tab-item-active");
-  hot.classList.add("homepage-products_tab-item");
-  new_pd.style.display = "grid";
-  hot_pd.style.display = "none";
-});
-
-hot.addEventListener("click", (e) => {
-  e.preventDefault();
-  console.log("clicked hot");
-  hot.classList.remove("homepage-products_tab-item");
-  hot.classList.add("homepage-products_tab-item-active");
-  newly.classList.remove("homepage-products_tab-item-active");
-  newly.classList.add("homepage-products_tab-item");
-  hot_pd.style.display = "grid";
-  new_pd.style.display = "none";
-});
-
 const products = [
     {
         "id": "6",
@@ -131,8 +102,28 @@ const products = [
         "price":"599.000vnd"
     },
 ];
-// Xử lý chi tiết sản phẩm 
+const pd = document.querySelector(".pd-p");
+
+products.forEach(product => {
+    pd.innerHTML += `
+        <div class="products-item">
+            <img src="assets/img/cool/p (${product.id}).jpg" alt="" class="products-item__img" data-value="${product.id}">
+            <h3 class="products-item__heading">${product.name}</h3>
+            <p class="products-item__color">Xanh</p>
+            <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                <p class="products-item__price">${product.price}</p>
+                <button class="add_btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    &nbsp Thêm vào giỏ hàng
+                </button>
+            </div>
+        </div>
+    `;
+});
+
+console.log(products.length)
 const show = document.querySelectorAll("main");
+console.log(show);
 const image_click = document.querySelectorAll(".products-item__img");
 console.log(image_click);
 image_click.forEach((image) => {
@@ -158,7 +149,7 @@ show[1].addEventListener('click', function(event) {
     }
 });
 function Insertproduct(index) {
-    const a= `<div class="product_warper">
+    return  `<div class="product_warper">
             <button class="close-btn" id="close-btn"><i class="fa-solid fa-x"></i></button>
             <div class="container2">
                 <div class="imgBx">
@@ -178,89 +169,4 @@ function Insertproduct(index) {
                 </div>
             </div>
         </div>`;
-        return a
 }
-// Xử lý giỏ hàng
-let array =[];
-let Render_array=[];
-const even = new Event('cartUpdated');
-const card = document.querySelector("tr");
-let total = 0;
-const btn_click = document.querySelectorAll(".products-item button");
-function saveDataToLocalStorage() {
-    localStorage.setItem("cartItems", JSON.stringify(Render_array));
-    // localStorage.setItem("pay_check",total)
-  }
-  window.addEventListener('storage', function(event) {
-    if (event.key === 'cartItems') {
-        Render_array = JSON.parse(localStorage.getItem("cartItems"));
-        console.log(Render_array.length);
-        if(Render_array.length==0){
-            Render_array=[];
-            array=[];
-        }
-    }
-});
-btn_click.forEach((button, index) => {
-    button.addEventListener("click", () => {
-        const value = image_click[index].getAttribute("data-value");
-        window.alert(`Đã thêm sản phẩm ${index}`);
-        let inid = products.findIndex(product => product.id === value);
-        if(!array.includes(value)){
-            array.unshift(value);
-            let object= 
-                {
-                    "id":`${products[inid].id}`,
-                    "name":`${products[inid].name}`,
-                    "price":`${products[inid].price}`,
-                    "Count":1
-                }
-            Render_array.unshift(object);
-            console.log(Render_array);
-            saveDataToLocalStorage();
-            window.dispatchEvent(even);
-        }
-        else{
-            let exist_index = array.findIndex(id => id===value);
-            if(exist_index!=-1){
-                console.log("đã tăng thêm sản phẩm")
-                Render_array[exist_index].Count++;
-                console.log(Render_array[exist_index])
-                console.log(total);
-                saveDataToLocalStorage();
-                window.dispatchEvent(even);
-            }
-        }
-    });
-});
-// function productDetailRender(index){
-//     return `
-//         <tr>
-//             <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (${Render_array[index].id}).jpg"></td>
-//             <td>
-//                 <p><span>${Render_array[index].id}</span><sup>đ</sup></p>
-//             </td>
-//             <td><input style="width: 30px;outline: none;" type="number" value="${Render_array[index].id}" min="1"></td>
-//             <td style="cursor: pointer;">Xóa</td>
-//         </tr>`;
-// }
-
-// function productDecrease(index) {
-//     if (Render_array[index]) {
-//         if (Render_array[index].Count > 1) {
-//             Render_array[index].Count--;
-//             console.log(Render_array[index].Count);
-//         } else {
-//             Render_array.splice(index, 1);
-//         }
-//         saveDataToLocalStorage();
-//     }
-// }
-// function PayMoneySum(){
-//     let sum = 0;
-//     Render_array.forEach(e => {
-//         let SumablePrice = parseInt(e.price.replace(/\D/g, ""));
-//         sum += e.Count * SumablePrice;
-//     });
-//     return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".") + 'vnđ';
-// }
