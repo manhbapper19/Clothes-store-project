@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KUMA</title>
+    <!-- link icon -->
+    <script src="https://kit.fontawesome.com/4da6ad9f64.js" crossorigin="anonymous"></script>
+    <!-- embed font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!---------------------------Header------------------------------>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png">
+        </div>
+        <div class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="index.html">Trang chủ</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#!">Sản phẩm</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Nam</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Hàng mới về</a></li>
+                                <li><a href="">Áo</a></li>
+                                <li><a href="">Quần</a></li>
+                                <li><a href="">Sale</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Nữ</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Hàng mới về</a></li>
+                                <li><a href="">Áo</a></li>
+                                <li><a href="">Quần</a></li>
+                                <li><a href="">Sale</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="menu__item">
+                    <a href="introduce.html">Giới thiệu</a>
+                </li>
+                <li class="menu__item"><a href="#!">Blog</a></li>
+                <li class="menu__item"><a href="#!">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div class="other">
+            <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li><a href="login.html" class="item"><i class="fa-solid fa-user"></i></a></li>
+            <li><a href="#!" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </div>
+    </header>
+
+    <!----------------------------Cart------------------------------>
+    <section class="cart">
+        <h2>Cart</h2>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (17).jpg"></td>
+                        <td>
+                            <p><span>149.000</span><sup>đ</sup></p>
+                        </td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (12).jpg"></td>
+                        <td>
+                            <p><span>149.000</span><sup>đ</sup></p>
+                        </td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style="text-align: right;" class="price-total">
+                <p style="font-weight: bold;">Tổng tiền:<span>149.000</span><sup>đ</sup></p>
+            </div>
+        </form>
+    </section>
+
+    <!------------------------ Footer ---------------------------->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-inner_sidebar">
+                    <div>
+                        <h4 class="footer-inner_title">KUMA lắng nghe bạn!</h4>
+                        <p class="footer-inner_text">Chúng tôi luôn trân trọng và mong đợi được nhận mọi ý kiến đóng góp
+                            từ khách hàng để nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa</p>
+                        <a href="" class="footer-inner_btn">Đóng góp ý kiến</a>
+                    </div>
+                    <div style="width: 25%">
+                        <div class="footer-inner_info">
+                            <!-- <div class="footer-inner_info_icon">
+                                <img src="assets/icon/icon-hotline.svg" alt="">
+                            </div> -->
+                            <div class="footer-inner_info_content">
+                                <span class="footer-inner_info_title">Hotline</span>
+                                <p class="footer-inner-info_text">
+                                    <a href="tel: 1900.1000"><br>1900.1000</a> -
+                                    <a href="tel: 0347925972">034.925.972</a>
+                                    <span><br>(9:00 - 22:00)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer-inner_info">
+                            <!-- <div class="footer-inner_info_icon">
+                                <img src="assets/icon/icon-email.svg" alt="">
+                            </div> -->
+                            <div class="footer-inner_info_content">
+                                <span class="footer-inner_info_title">Email</span>
+                                <p class="footer-inner-info_text1">thayhuycodeitthoi@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="social">
+                        <img class="social-item" id="social-item1" src="assets/icon/fb.png" alt="">
+                        <img class="social-item" src="assets/icon/tiktok.png" alt="">
+                    </div> -->
+                </div>
+                <!-- <div class="footer-inner-menu">
+    
+                        </div> -->
+            </div>
+        </div>
+    </footer>
+
+    </body>
+    <!-- <script src="index.js"></script> -->
+</html>
