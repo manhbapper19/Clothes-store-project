@@ -207,7 +207,7 @@ btn_click.forEach((button, index) => {
                 }
             Render_array.unshift(object);
             console.log(Render_array);
-            
+            total=PayMoneySum();
             saveDataToLocalStorage();
         }
         else{
