@@ -178,3 +178,12 @@ function Insertproduct(index) {
             </div>
         </div>`;
 }
+
+// ----------------------Cart-------------------------
+// const btn = document.querySelectorAll(".add_btn")
+// btn.forEach(function(button, index){
+//     button.addEventListener("click", function(event){
+//         var btnItem = event.target
+//         var product = 
+//     })
+// })
