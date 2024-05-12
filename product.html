@@ -52,13 +52,18 @@
                     <a href="introduce.html">Giới thiệu</a>
                 </li>
                 <li class="menu__item"><a href="blog.html">Blog</a></li>
-                <li class="menu__item"><a href="#!">Liên hệ</a></li>
+                <!-- <li class="menu__item"><a href="#!">Liên hệ</a></li> -->
             </ul>
         </div>
         <div class="other">
             <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
-            <li><a href="login.html" class="item"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#!" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li>
+                <div style="display: flex;">
+                    <a href="login.html" class="item"><i class="fa-solid fa-user"></i></a>
+                    <div class="login" id="code">&nbsp Đăng nhập</div>
+                </div>
+            </li>
+            <li><a href="cart.html" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </div>
     </header>
     <main class="homepage activ">
@@ -384,5 +389,9 @@
         setInterval(imgSlide, 5000)
     </script> -->
 <script src="index.js"></script>
-
+<script>
+    const login = document.getElementById("code")
+    const us = localStorage.getItem("username")
+    login.innerHTML = us
+</script>
 </html>

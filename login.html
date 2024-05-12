@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KUMA</title>
@@ -10,172 +9,234 @@
     <!-- embed font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+      *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "poppins", sans-serif;
+      }
+      body{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background: url("image/Background.jpg");
+          background-size: cover;
+          background-position: center;
+      }
+      .wrapper {
+          width: 420px;
+          background: rgb(48, 11, 152);
+          color:aliceblue;
+          border-radius: 10px;
+          padding: 30px;
+      }
+      .wrapper h1{
+          font-size: 36px;
+          text-align: center;
+      }
+      .wrapper .input-box{
+          position: relative;
+          width: 100%;
+          height: 50px;
+          margin: 30px 0;
+      }
+      .input-box input {
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          border: 2px solid gray;
+          border-radius: 40px;
+          font-size: 16px;
+          color:aliceblue;
+          padding: 20px 45px 20px 20px;
+      }
+      .input-box ::placeholder{
+          color: aliceblue;
+      }
+      .input-box i {
+          position: absolute;
+          right: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 20px;
+      }
+      .wrapper .remember-forgot{
+          display: flex;
+          justify-content: space-between;
+          font-size: 14.5px;
+          margin: -15px 0 15px;
+      }
+      .remember-forgot label input {
+          accent-color: white;
+          margin-right: 3px;
+      }
+      .remember-forgot a{
+          color: aliceblue;
+          text-decoration: none;
+      }
+      .remember-forgot a:hover {
+          text-decoration: underline;
+      }
+      .wrapper .btn {
+          width: 100%;
+          height: 45px;
+          background-color: aliceblue;
+          border: none;
+          outline: none;
+          border-radius: 40px;
+          box-shadow: 0 0 10px black;
+          cursor: pointer;
+          font-size: 16px;
+          color: black;
+          font-weight: 600;
+      }
+      .wrapper .register-link {
+          font-size: 14.5px;
+          text-align: center;
+          margin-top: 20px;
+      }
+      .register-link p a{
+          color: aliceblue;
+          text-decoration: none;
+          font-weight: 600;
+      }
+      .register-link p a:hover {
+          text-decoration: underline;
+      }
+  </style>
 </head>
-
 <body>
-    <header>
-        <div class="logo">
-            <img src="assets/img/logo.png">
-        </div>
-        <div class="menu">
-            <ul class="menu__list">
-                <li class="menu__item">
-                    <a href="index.html">Trang chủ</a>
-                </li>
-                <li class="menu__item">
-                    <a href="#!">Sản phẩm</a>
-                    <ul class="sub-menu">
-                        <li><a href="">Nam</a>
-                            <ul class="sub-menu">
-                                <li><a href="">Hàng mới về</a></li>
-                                <li><a href="">Áo</a></li>
-                                <li><a href="">Quần</a></li>
-                                <li><a href="">Sale</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Nữ</a>
-                            <ul class="sub-menu">
-                                <li><a href="">Hàng mới về</a></li>
-                                <li><a href="">Áo</a></li>
-                                <li><a href="">Quần</a></li>
-                                <li><a href="">Sale</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </li>
-                <li class="menu__item">
-                    <a href="introduce.html">Giới thiệu</a>
-                </li>
-                <li class="menu__item"><a href="#!">Blog</a></li>
-                <li class="menu__item"><a href="#!">Liên hệ</a></li>
-            </ul>
-        </div>
-        <div class="other">
-            <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
-            <li><a href="login.html" class="item"><i class="fa-solid fa-user"></i></a></li>
-            <li><a href="#!" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
-        </div>
-    </header>
-<section class="vh-100">
-  <div class="container-fluid h-custom">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
-          class="img-fluid" alt="Sample image">
-      </div>
-      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-        <form>
-          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
-
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-floating mx-1">
-              <i class="fab fa-linkedin-in"></i>
-            </button>
-          </div>
-
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0">Or</p>
-          </div>
-
-          <!-- Email input -->
-          <div data-mdb-input-init class="form-outline mb-4">
-            <input type="email" id="form3Example3" class="form-control form-control-lg"
-              placeholder="Enter a valid email address" />
-            <label class="form-label" for="form3Example3">Email address</label>
-          </div>
-
-          <!-- Password input -->
-          <div data-mdb-input-init class="form-outline mb-3">
-            <input type="password" id="form3Example4" class="form-control form-control-lg"
-              placeholder="Enter password" />
-            <label class="form-label" for="form3Example4">Password</label>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <!-- Checkbox -->
-            <div class="form-check mb-0">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-              <label class="form-check-label" for="form2Example3">
-                Remember me
-              </label>
+    <!-- <script src="script.js"></script> -->
+    <div class="wrapper">
+        <form class="login" onsubmit="checklog(event)">
+            <h1>Đăng Nhập</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Tên đăng nhập" id="user">
+                <i class="fa-solid fa-user"></i>
             </div>
-            <a href="#!" class="text-body">Forgot password?</a>
-          </div>
-
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                class="link-danger">Register</a></p>
-          </div>
-
+            <div class="input-box">
+                <input type="password" placeholder="Mật Khẩu" id="pass">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Lưu thông tin</label>
+                <a href="forgot.html">Quên mật khẩu?</a>
+            </div>
+            <button type="submit" class="btn">Đăng Nhập</button>
+            <div class="register-link">
+                <p>Chưa có tài khoản? <a href="resgister.html">Đăng kí</a></p>
+            </div>
         </form>
-      </div>
     </div>
-  </div>
-  <div
-    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
-    <!-- Copyright -->
-    <div class="text-white mb-3 mb-md-0">
-      Copyright © 2020. All rights reserved.
-    </div>
-    <!-- Copyright -->
-
-    <!-- Right -->
-    <div>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#!" class="text-white me-4">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="#!" class="text-white">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </div>
-</section>
 </body>
-    <!-- <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let loginForm = document.getElementById("login-boxes");
-            loginForm.addEventListener("submit", function (e) {
-                e.preventDefault();
-                let username = document.getElementById("usr").value;
-                let password = document.getElementById("pw").value;
+<script>
+  function hw(){
+    window.alert("Hello world !");
+}
 
+function gotoMainPage(){
+    window.location.href="index.html";
+}
 
-                let regex =/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!%*?&])[A-Za-z\d@.#$!%*?&]{8,15}$/;
-                if(!regex.test(password)){
-                    alert("mật khẩu không hợp lệ");
-                }
-                if (username !== "" && password !== ""&&regex.test(password)) {
-                    window.alert("Đăng nhập thành công");
-                    window.location.href = "index.html";
+function Login(){
+    window.location.href="login.html";
+}
 
-                } else {
-                    window.alert("Đăng nhập thất bại, vui lòng đăng nhập lại");
-                    document.getElementById("usr").value = "";
-                    document.getElementById("pw").value = "";
-                }
-            });
-        });
-    </script> -->
+function checkreg(event){
+    event.preventDefault();
+    var name = document.getElementById('rgname').value;
+    var username = document.getElementById('rguser').value;
+    var email = document.getElementById('rgemail').value;
+    var phonenum = document.getElementById('rgphonenum').value;
+    var pass1 = document.getElementById('rgpass1').value;
+    var pass2 = document.getElementById('rgpass2').value;
+    if( name == ''){
+        window.alert('Vui lòng nhập tên người dùng');
+        return false;
+    }
+    if( username == ''){
+        window.alert('Vui lòng nhập tên đăng nhập ');
+        return false;
+    }
+    if(username.length < 8){
+        window.alert('Tên đăng nhập không được < 8 kí tự');
+        return false;
+    }
+    if(phonenum.length != 10){
+        window.alert("Số điện thoại không hợp lệ!");
+        return false;
+    }
+
+    if(pass1 == ''){
+        window.alert("Vui lòng nhập mật khẩu");
+        return false;
+    }
+    if (pass1 !== pass2 ){
+        window.alert("Mật khẩu không trùng khớp! ");
+        return false;
+    }
+    
+    var userdata = {
+        name : name,
+        username : username,
+        email : email,
+        phonenumber : phonenum,
+        pass : pass1
+    };
+    var json = JSON.stringify(userdata);
+    localStorage.setItem(username,json);
+    window.alert("Đăng ký thành công");
+    window.location.href="login.html";
+}
+function checklog(event){
+    event.preventDefault();
+    var username = document.getElementById('user').value;
+    var pass = document.getElementById('pass').value;
+    var udata = localStorage.getItem(username);
+    var data = JSON.parse(udata);
+    if( username == ''){
+        window.alert('Tên đăng nhập không được để trống');
+        return false;
+    }
+    if(username.length < 8){
+        window.alert('Tên đăng nhập không được < 8 kí tự');
+        return false;
+    }
+    if(pass == ''){
+        window.alert("Mật khẩu không được để trống");
+        return false;
+    }
+    if(username == data.username && pass == data.pass){
+        window.alert("đăng nhập thành công");
+        window.location.href='index.html';
+        localStorage.setItem("username", username)
+        return true;
+    }
+    else{
+        window.alert("Đăng nhập thất bại");
+        return false;
+    }
+}
+function displayname(){
+    var text = document.getElementById('userlogin');
+    var udata = localStorage.getItem(username);
+    var data = JSON.parse(udata);
+    text.innerHTML = data.name;
+}
+function toinfor(ImageId){
+    window.location.href='infor-'+ImageId+'.html';
+}
+function towatch(ImageId){
+    window.location.href='watch-'+ImageId+'.html';
+}
+
+</script>
 </html>

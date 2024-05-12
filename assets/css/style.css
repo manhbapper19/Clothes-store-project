@@ -37,7 +37,7 @@ header {
 .menu {
     flex: 3;
     display: flex;
-    margin-left: 302px;
+    margin-left: 70px;
     margin-right: -300px;
 }
 .menu > li {

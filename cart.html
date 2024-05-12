@@ -29,7 +29,7 @@
                     <a href="index.html">Trang chủ</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#!">Sản phẩm</a>
+                    <a href="product.html">Sản phẩm</a>
                     <ul class="sub-menu">
                         <li><a href="">Nam</a>
                             <ul class="sub-menu">
@@ -53,13 +53,18 @@
                 <li class="menu__item">
                     <a href="introduce.html">Giới thiệu</a>
                 </li>
-                <li class="menu__item"><a href="#!">Blog</a></li>
+                <li class="menu__item"><a href="blog.html">Blog</a></li>
                 <li class="menu__item"><a href="#!">Liên hệ</a></li>
             </ul>
         </div>
         <div class="other">
             <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
-            <li><a href="login.html" class="item"><i class="fa-solid fa-user"></i></a></li>
+            <li>
+                <div style="display: flex;">
+                    <a href="login.html" class="item"><i class="fa-solid fa-user"></i></a>
+                    <div class="login" id="code">&nbsp Đăng nhập</div>
+                </div>
+            </li>
             <li><a href="#!" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </div>
     </header>
@@ -151,4 +156,9 @@
 
     </body>
     <script src="assets/js/cart.js"></script>
+    <script>
+        const login = document.getElementById("code")
+        const us = localStorage.getItem("username")
+        login.innerHTML = us
+    </script>
 </html>

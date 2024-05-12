@@ -28,7 +28,7 @@ function productDetailRender(index) {
         <tr>
             <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (${Render_array[index].id}).jpg"></td>
             <td>
-                <p><span>${Render_array[index].price}</span><sup>đ</sup></p>
+                <p><span>${Render_array[index].price}</span></p>
             </td>
             <td><input style="width: 60px;outline: none;" type="number" value="${Render_array[index].Count}" min="1"></td>
             <td ><button style="cursor: pointer; border:none;padding:10px 20%;border-radius:6px">Xoá</button</td>
@@ -45,15 +45,15 @@ del_product.forEach((e,index)=>{
         render();
     })
 })
-del_product.forEach((e,index)=>{
-    e.addEventListener('click',()=>{
-        Render_array.splice(index,1);
-        saveDataToLocalStorage();
-        window.location.reload();
-        produc_row.innerHTML="";
-        render();
-    })
-})
+// del_product.forEach((e,index)=>{
+//     e.addEventListener('click',()=>{
+//         Render_array.splice(index,1);
+//         saveDataToLocalStorage();
+//         window.location.reload();
+//         produc_row.innerHTML="";
+//         render();
+//     })
+// })
 
 input.forEach((e, index) => {
     e.addEventListener('input', (event) => {
