@@ -182,7 +182,7 @@ function Insertproduct(index) {
 }
 // Xử lý giỏ hàng
 let array =[];
-let Render_array=[];
+let Render_array= JSON.parse(localStorage.getItem("cartItems"))??[];
 const even = new Event('cartUpdated');
 const card = document.querySelector("tr");
 let total = 0;
@@ -215,6 +215,7 @@ btn_click.forEach((button, index) => {
                     "price":`${products[inid].price}`,
                     "Count":1
                 }
+                console.log(typeof Render_array);
             Render_array.unshift(object);
             console.log(Render_array);
             saveDataToLocalStorage();

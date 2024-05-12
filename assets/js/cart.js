@@ -21,6 +21,7 @@ function PayMoneySum() {
   return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".") + "VNĐ";
 }
 function saveDataToLocalStorage() {
+   console.log(123);
     localStorage.setItem("cartItems", JSON.stringify(Render_array));
   }
 function productDetailRender(index) {
@@ -45,16 +46,13 @@ del_product.forEach((e,index)=>{
         render();
     })
 })
-del_product.forEach((e,index)=>{
-    e.addEventListener('click',()=>{
-        Render_array.splice(index,1);
-        saveDataToLocalStorage();
-        window.location.reload();
-        produc_row.innerHTML="";
-        render();
-    })
+window.addEventListener('storage', function(event) {
+  if (event.key === 'cartItems') {
+      Render_array = JSON.parse(localStorage.getItem("cartItems"));
+      produc_row.innerHTML="";
+      render();
+  }
 })
-
 input.forEach((e, index) => {
     e.addEventListener('input', (event) => {
         console.log(event);
