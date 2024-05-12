@@ -495,6 +495,121 @@ header {
   background: none;
   border: none;
 }
+/* -------------------Giới thiệu---------------------------------- */
+.main{
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-color: #f1f1f1;
+}
+.main .main_container{
+  margin: 0 96px;
+}
+.main .aligned_center{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.main_container_left{
+  padding: 4px 4px;
+}
+.main_container_left h2{
+  margin-top: -5px;
+  font-size: 50px;
+  line-height: 1.25em;
+  font-family: 500;
+}
+.main_container_right{
+  padding: 4px 4px;
+}
+.image img{
+  width: 75%;
+  height: auto;
+}
+.main_container_text{
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  padding-left: 50px;
+}
+.main_container_text li {
+  list-style-type: disc;
+}
+/* ----------------------------Blog---------------------- */
+.blogs-listings{
+  margin-top: 2em;
+}
+.container--medium{
+  max-width: 1280px;
+}
+.grid{
+  display: flex;
+  margin-left: -9px;
+  margin-right: -9px;
+  padding: 0;
+  position: relative;
+  float: none;
+}
+.grid__column{
+  position: relative;
+  box-sizing: border-box;
+  min-height: 1px;
+  vertical-align: top;
+  margin-left: 0!important;
+  margin-right: 0!important;
+  padding: 9px;
+  width: 100%;
+}
+.article-grid__thumbnail img{
+  width: 100%;
+}
+.article-grid__thumbnail{
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+.article-grid{
+  display: flex;
+  flex-flow: column;
+}
+.blogs-listings__heading{
+  padding: 10px 0 10px 20px;
+  background: #2f5acf;
+  border-radius: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1em;
+}
+.article-grid--listing .article-grid__content{
+  flex: 1;
+  padding-left: 8px;
+}
+.article-grid__title{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 114.6%;
+  letter-spacing: .03em;
+  color: #000;
+  margin: 0 0 12px;
+}
+.article-grid__infomations{
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114.6%;
+  letter-spacing: .03em;
+  margin-bottom: 7px;
+  color: #8e8e8e;
+}
+.article-grid__description{
+  margin-top: 12px;
+  margin-bottom: 9px;
+  display: -webkit-box;
+  text-align: justify;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 /* -------------------------Cart----------------------------------- */
 .cart{
   width: 50%;

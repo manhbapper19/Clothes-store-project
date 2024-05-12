@@ -27,7 +27,7 @@
                     <a href="index.html">Trang chủ</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#!">Sản phẩm</a>
+                    <a href="product.html">Sản phẩm</a>
                     <ul class="sub-menu">
                         <li><a href="">Nam</a>
                             <ul class="sub-menu">
@@ -51,7 +51,7 @@
                 <li class="menu__item">
                     <a href="introduce.html">Giới thiệu</a>
                 </li>
-                <li class="menu__item"><a href="#!">Blog</a></li>
+                <li class="menu__item"><a href="blog.html">Blog</a></li>
                 <li class="menu__item"><a href="#!">Liên hệ</a></li>
             </ul>
         </div>
@@ -61,16 +61,261 @@
             <li><a href="#!" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </div>
     </header>
-    <main class="homepage">
-        <section class="homepage-products" id="product">
+    <main class="homepage activ">
+        <!-- Banner -->
+        <section class="homepage-banner">
+            <img class="cover" src="assets/img/DESKTOP_EX-DRY_BANNER.png" alt="">
+        </section>
+        <!-- Products -->
+        <section class="homepage-products">
             <div class="container">
                 <div class="homepage-products_tab">
-                    <h2 class="text" style="text-transform: uppercase; margin: auto;">Tất cả các sản phẩm</h2>
+                    <a href="#!" id="new" class="homepage-products_tab-item-active">Sản phẩm mới</a>
+                    <a href="#!" id="hot" class="homepage-products_tab-item">Sản phẩm hot</a>
                 </div>
-                <div class="products__list" id="pd-p">
-                   
+                <!-- sp moi -->
+                <div class="products__list" id="new-pd">
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (17).jpg" alt="" class="products-item__img" data-value="17">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (12).jpg" alt="" class="products-item__img" data-value="12">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (13).jpg" alt="" class="products-item__img" data-value="13">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (14).jpg" alt="" class="products-item__img" data-value="14">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Sp hot-->
+                <div class="products__list" id="hot-pd" style="display: none;">
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (15).jpg" alt="" class="products-item__img" data-value="15">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (12).jpg" alt="" class="products-item__img" data-value="12">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (11).jpg" alt="" class="products-item__img" data-value="11">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (6).jpg" alt="" class="products-item__img" data-value="16">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
+
+            </div>
+
+        </section>
+        <!-- Banner -->
+        <!-- <section class="banner-block">
+            <div class="banner-block_wrapper">
+                <img src="assets/img/mceclip8_45.png" alt="">
+                <div class="banner-block_content">
+                    <h2 class="banner-block_heading" style="text-transform: uppercase;">đồ chạy bộ</h2>
+                    <p class="banner-block_text">Trải nghiệm chưa từng có trong mỗi sải chân</p>
+                </div>
+            </div>
+        </section> -->
+        <!-- Products -->
+        <section class="homepage-products">
+            <div class="container">
+                <div class="homepage-products_tab">
+                    <h2 class="homepage-products_tab-item-active" style="text-transform: uppercase; font-weight: 400;">Sản phẩm chạy bộ</h2>
+                </div>
+                <div class="products__list">
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (74).jpg" alt="" class="products-item__img" data-value="7">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (65).jpg" alt="" class="products-item__img" data-value="65">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (4).jpg" alt="" class="products-item__img" data-value="34"> 
+                        <h3 class="products-item__heading">Quần Short nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (67).jpg" alt="" class="products-item__img" data-value="67">
+                        <h3 class="products-item__heading">Quần Short nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Banner -->
+        <!-- <section class="banner-block">
+            <div class="banner-block_wrapper">
+                <img src="assets/img/mceclip13_75.png" alt="">
+                <div class="banner-block_content">
+                    <h2 class="banner-block_heading" style="text-transform: uppercase;">áo thun nam</h2>
+                    <p class="banner-block_text">Đáp ứng mọi nhu cầu cho bạn lựa chọn</p>
+                </div>
+            </div>
+        </section> -->
+        <section class="homepage-products">
+            <div class="container">
+                <div class="homepage-products_tab">
+                    <h2 class="homepage-products_tab-item-active" style="text-transform: uppercase; font-weight: 400;">Sản phẩm áo thun nam</h2>
+                </div>
+                <div class="products__list">
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (115).jpg" alt="" class="products-item__img" data-value="115">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (112).jpg" alt="" class="products-item__img" data-value="112">
+                        <h3 class="products-item__heading">Áo thun nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (113).jpg" alt="" class="products-item__img" data-value="113">
+                        <h3 class="products-item__heading">Quần Short nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-item">
+                        <img src="assets/img/cool/p (114).jpg" alt="" class="products-item__img" data-value="114">
+                        <h3 class="products-item__heading">Quần Short nam</h3>
+                        <p class="products-item__color">Xanh</p>
+                        <div class="nested_info" style="display: flex;align-items: center;padding: 10px 5px;">
+                            <p class="products-item__price">149.000đ</p>
+                            <button class="add_btn">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                                &nbsp Thêm vào giỏ hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
     <main class="product-display">
@@ -87,9 +332,9 @@
                     </div>
                     <div style="width: 25%">
                         <div class="footer-inner_info">
-                            <div class="footer-inner_info_icon">
+                            <!-- <div class="footer-inner_info_icon">
                                 <img src="assets/icon/icon-hotline.svg" alt="">
-                            </div>
+                            </div> -->
                             <div class="footer-inner_info_content">
                                 <span class="footer-inner_info_title">Hotline</span>
                                 <p class="footer-inner-info_text">
@@ -100,19 +345,19 @@
                             </div>
                         </div>
                         <div class="footer-inner_info">
-                            <div class="footer-inner_info_icon">
+                            <!-- <div class="footer-inner_info_icon">
                                 <img src="assets/icon/icon-email.svg" alt="">
-                            </div>
+                            </div> -->
                             <div class="footer-inner_info_content">
                                 <span class="footer-inner_info_title">Email</span>
                                 <p class="footer-inner-info_text1">thayhuycodeitthoi@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    <div class="social">
+                    <!-- <div class="social">
                         <img class="social-item" id="social-item1" src="assets/icon/fb.png" alt="">
                         <img class="social-item" src="assets/icon/tiktok.png" alt="">
-                    </div>
+                    </div> -->
                 </div>
                 <!-- <div class="footer-inner-menu">
     
@@ -138,5 +383,6 @@
         }
         setInterval(imgSlide, 5000)
     </script> -->
-<script src="product.js"></script>
+<script src="index.js"></script>
+
 </html>

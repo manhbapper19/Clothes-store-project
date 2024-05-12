@@ -182,7 +182,7 @@ function Insertproduct(index) {
 }
 // Xử lý giỏ hàng
 let array =[];
-let Render_array=[];
+let Render_array= JSON.parse(localStorage.getItem("cartItems"))??[];
 const even = new Event('cartUpdated');
 const card = document.querySelector("tr");
 let total = 0;

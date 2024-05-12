@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://kit.fontawesome.com/735b42b49f.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "poppins", sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url("image/Background.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .wrapper {
+            width: 420px;
+            background: rgb(48, 11, 152);
+            color:aliceblue;
+            border-radius: 10px;
+            padding: 30px;
+        }
+        .wrapper h1{
+            font-size: 36px;
+            text-align: center;
+        }
+        .wrapper .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+        }
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            border: 2px solid gray;
+            border-radius: 40px;
+            font-size: 16px;
+            color:aliceblue;
+            padding: 20px 45px 20px 20px;
+        }
+        .input-box ::placeholder{
+            color: aliceblue;
+        }
+        .input-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            background-color: aliceblue;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            box-shadow: 0 0 10px black;
+            cursor: pointer;
+            font-size: 16px;
+            color: black;
+            font-weight: 600;
+        }
+        .wrapper .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .register-link p a{
+            color: aliceblue;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- <script src="script.js"></script> -->
+    <div class="wrapper">
+        <form class="login"  onsubmit="checkreg(event)">
+            <h1>Đăng Kí</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Họ tên" id='rgname' >
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Tên đăng nhập (độ dài >= 8 kí tự)" id='rguser'>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Email" id="rgemail" >
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="number" placeholder="Số điện thoại" id="rgphonenum" >
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Mật khẩu" id="rgpass1" >
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="Nhập lại mật khẩu" id="rgpass2" >
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <button type="submit" class="btn">Đăng kí</button>
+            <div class="register-link">
+                <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function hw(){
+      window.alert("Hello world !");
+  }
+  
+  function gotoMainPage(){
+      window.location.href="index.html";
+  }
+  
+  function Login(){
+      window.location.href="login.html";
+  }
+  
+  function checkreg(event){
+      event.preventDefault();
+      var name = document.getElementById('rgname').value;
+      var username = document.getElementById('rguser').value;
+      var email = document.getElementById('rgemail').value;
+      var phonenum = document.getElementById('rgphonenum').value;
+      var pass1 = document.getElementById('rgpass1').value;
+      var pass2 = document.getElementById('rgpass2').value;
+      if( name == ''){
+          window.alert('Vui lòng nhập tên người dùng');
+          return false;
+      }
+      if( username == ''){
+          window.alert('Vui lòng nhập tên đăng nhập ');
+          return false;
+      }
+      if(username.length < 8){
+          window.alert('Tên đăng nhập không được < 8 kí tự');
+          return false;
+      }
+      if(phonenum.length != 10){
+          window.alert("Số điện thoại không hợp lệ!");
+          return false;
+      }
+  
+      if(pass1 == ''){
+          window.alert("Vui lòng nhập mật khẩu");
+          return false;
+      }
+      if (pass1 !== pass2 ){
+          window.alert("Mật khẩu không trùng khớp! ");
+          return false;
+      }
+      
+      var userdata = {
+          name : name,
+          username : username,
+          email : email,
+          phonenumber : phonenum,
+          pass : pass1
+      };
+      var json = JSON.stringify(userdata);
+      localStorage.setItem(username,json);
+      window.alert("Đăng ký thành công");
+      window.location.href="login.html";
+  }
+  function checklog(event){
+      event.preventDefault();
+      var username = document.getElementById('user').value;
+      var pass = document.getElementById('pass').value;
+      var udata = localStorage.getItem(username);
+      var data = JSON.parse(udata);
+      if( username == ''){
+          window.alert('Tên đăng nhập không được để trống');
+          return false;
+      }
+      if(username.length < 8){
+          window.alert('Tên đăng nhập không được < 8 kí tự');
+          return false;
+      }
+      if(pass == ''){
+          window.alert("Mật khẩu không được để trống");
+          return false;
+      }
+      if(username == data.username && pass == data.pass){
+        localStorage.setItem("username", username);
+        localStorage.setItem("password", pass); 
+          window.alert("đăng nhập thành công");
+          window.location.href='index.html';
+          return true;
+      }
+      else{
+          window.alert("Đăng nhập thất bại");
+          return false;
+      }
+  }
+  function displayname(){
+    //   var text = document.getElementById('userlogin');
+      var udata = localStorage.getItem(username);
+      var data = JSON.parse(udata);
+    //   text.innerHTML = data.name;
+  }
+  function toinfor(ImageId){
+      window.location.href='infor-'+ImageId+'.html';
+  }
+  function towatch(ImageId){
+      window.location.href='watch-'+ImageId+'.html';
+  }
+  
+  </script>
+</html>
