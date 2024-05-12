@@ -181,7 +181,7 @@ function Insertproduct(index) {
         return a
 }
 // Xử lý giỏ hàng
-let array =[];
+let array =JSON.parse(localStorage.getItem("array"))??[];
 let Render_array= JSON.parse(localStorage.getItem("cartItems"))??[];
 const even = new Event('cartUpdated');
 const card = document.querySelector("tr");
@@ -189,6 +189,7 @@ let total = 0;
 const btn_click = document.querySelectorAll(".products-item button");
 function saveDataToLocalStorage() {
     localStorage.setItem("cartItems", JSON.stringify(Render_array));
+    localStorage.setItem("array",JSON.stringify(array));
     // localStorage.setItem("pay_check",total)
   }
   window.addEventListener('storage', function(event) {
