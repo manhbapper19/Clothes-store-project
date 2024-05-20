@@ -3,7 +3,6 @@ const hot = document.getElementById("hot");
 const new_pd = document.querySelector("#new-pd");
 const hot_pd = document.querySelector("#hot-pd");
 
-// login-localStorage
 
 
 newly.addEventListener("click", (e) => {
@@ -196,18 +195,15 @@ function saveDataToLocalStorage() {
   window.addEventListener('storage', function(event) {
     if (event.key === 'cartItems') {
         Render_array = JSON.parse(localStorage.getItem("cartItems"));
-        console.log(Render_array.length);
-        if(Render_array.length==0){
-            Render_array=[];
-            array=[];
-        }
+        array = JSON.parse(this.localStorage.getItem("array"));
     }
 });
 btn_click.forEach((button, index) => {
     button.addEventListener("click", () => {
         const value = image_click[index].getAttribute("data-value");
+        console.log(value);
         window.alert(`Đã thêm sản phẩm ${index}`);
-        let inid = products.findIndex(product => product.id === value);
+        let inid = products.findIndex(product => product.id == value);
         if(!array.includes(value)){
             array.unshift(value);
             let object= 

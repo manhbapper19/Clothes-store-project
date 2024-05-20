@@ -1,4 +1,5 @@
 let Render_array = JSON.parse(localStorage.getItem("cartItems"));
+let array = JSON.parse(localStorage.getItem("array"));
 console.log(Render_array);
 const produc_row = document.querySelector("tbody");
 const Money_display = document.getElementById("money");
@@ -23,13 +24,14 @@ function PayMoneySum() {
 function saveDataToLocalStorage() {
    console.log(123);
     localStorage.setItem("cartItems", JSON.stringify(Render_array));
+    localStorage.setItem("array", JSON.stringify(Render_array));
   }
 function productDetailRender(index) {
   return `
         <tr>
             <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (${Render_array[index].id}).jpg"></td>
             <td>
-                <p><span>${Render_array[index].price}</span></p>
+                <p><span>${Render_array[index].price}</span><sup>đ</sup></p>
             </td>
             <td><input style="width: 60px;outline: none;" type="number" value="${Render_array[index].Count}" min="1"></td>
             <td ><button style="cursor: pointer; border:none;padding:10px 20%;border-radius:6px">Xoá</button</td>
@@ -40,9 +42,11 @@ const del_product = document.querySelectorAll("td button");
 del_product.forEach((e,index)=>{
     e.addEventListener('click',()=>{
         Render_array.splice(index,1);
+        array.splice(index,1);
         saveDataToLocalStorage();
         window.location.reload();
         produc_row.innerHTML="";
+
         render();
     })
 })
