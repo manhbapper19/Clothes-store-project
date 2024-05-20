@@ -5,7 +5,8 @@ const produc_row = document.querySelector("tbody");
 const Money_display = document.getElementById("money");
 
 function render(){
-    let pay_check=0
+    produc_row.innerHTML = "";
+    let pay_check=0;
     Render_array.forEach((e, index) => {
     pay_check = PayMoneySum();
         produc_row.innerHTML += productDetailRender(index);
@@ -24,7 +25,7 @@ function PayMoneySum() {
 function saveDataToLocalStorage() {
    console.log(123);
     localStorage.setItem("cartItems", JSON.stringify(Render_array));
-    localStorage.setItem("array", JSON.stringify(Render_array));
+    localStorage.setItem("array", JSON.stringify(array));
   }
 function productDetailRender(index) {
   return `
@@ -46,13 +47,13 @@ del_product.forEach((e,index)=>{
         saveDataToLocalStorage();
         window.location.reload();
         produc_row.innerHTML="";
-
         render();
     })
 })
 window.addEventListener('storage', function(event) {
   if (event.key === 'cartItems') {
       Render_array = JSON.parse(localStorage.getItem("cartItems"));
+      array=JJSON.parse(localStorage.getItem("array"));
       produc_row.innerHTML="";
       render();
   }

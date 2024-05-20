@@ -32,7 +32,7 @@ const products = [
         "id": "6",
         "name": "Áo phông nyan~",
         "descibe": "Chiếc áo mèo cute",
-        "price":"149.000vnd"
+        "price":"189.000vnd"
     },
     {
         "id": "7",
@@ -44,91 +44,91 @@ const products = [
         "id": "11",
         "name": "Áo ba lỗ",
         "descibe": "Áo thoáng mát, phù hợp cho những người thích vận động nhưng vẫn có cá tính",
-        "price":"149.000vnd"
+        "price":"199.000vnd"
     },
     {
         "id": "12",
         "name": "Áo thun nam",
         "descibe": "Áo thoáng mát, phù hợp cho những người thích vận động nhưng vẫn có cá tính",
-        "price":"149.000vnd"
+        "price":"199.000vnd"
     },
     {
         "id": "13",
         "name": "Áo phông xanh",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"149.000vnd"
+        "price":"299.000vnd"
     },
     {
         "id": "14",
         "name": "Áo polo trắng",
         "descibe": "Áo thoáng mát, phù hợp cho những doanh nhân trẻ",
-        "price":"149.000vnd"
+        "price":"199.000vnd"
     },
     {
         "id": "16",
         "name": "Áo phông trắng",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"149.000vnd"
+        "price":"299.000vnd"
     },
     {
         "id": "17",
         "name": "Áo ba lỗ",
         "descibe": "Áo ba lỗ thể thao, thích hợp cho việc vận động mạnh",
-        "price":"149.000vnd"
+        "price":"199.000vnd"
     },
     {
         "id": "18",
         "name": "Áo polo S cafe",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp, không bị nhăn khi giặt",
-        "price":"149.000vnd"
+        "price":"499.000vnd"
     },
     {
         "id": "15",
         "name": "Áo phông S",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"149.000vnd"
+        "price":"399.000vnd"
     },
     {
         "id": "34",
         "name": "Áo chay",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"149.000vnd"
+        "price":"399.000vnd"
     },
     {
         "id": "65",
         "name": "Áo team whale",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"149.000vnd"
+        "price":"399.000vnd"
     },
     {
         "id": "67",
         "name": "Áo ba lỗ",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"149.000vnd"
+        "price":"399.000vnd"
     },
     {
         "id": "112",
         "name": "Áo ba lỗ",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"149.000vnd"
+        "price":"399.000vnd"
     },
     {
         "id": "113",
         "name": "Áo chạy",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"149.000vnd"
+        "price":"399.000vnd"
     },
     {
         "id": "114",
         "name": "Áo phông gôm",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"149.000vnd"
+        "price":"599.000vnd"
     },
     {
         "id": "115",
         "name": "Áo ba lỗ sport",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"149.000vnd"
+        "price":"599.000vnd"
     },
 ];
 // Xử lý chi tiết sản phẩm 
@@ -147,6 +147,12 @@ image_click.forEach((image) => {
     console.log(u);
     show[1].innerHTML = u;
     show[1].style.display = "flex";
+    const buy= document.querySelector(".buy_btn");
+    console.log(buy);
+    buy.addEventListener('click',()=>{
+        addList(value,index);
+        window.location.href="cart.html";
+    })
     }
   });
 });
@@ -157,6 +163,32 @@ show[1].addEventListener('click', function(event) {
         show[2].style.display = "none";
     }
 });
+function addList(value,index){
+    if(!array.includes(value)){
+        array.unshift(value);
+        let object= 
+            {
+                "id":`${products[index].id}`,
+                "name":`${products[index].name}`,
+                "price":`${products[index].price}`,
+                "Count":1
+            }
+        Render_array.unshift(object);
+        console.log(Render_array);
+        saveDataToLocalStorage();
+    }
+    else{
+        let exist_index = array.findIndex(id => id===value);
+        if(exist_index!=-1){
+            console.log("đã tăng thêm sản phẩm")
+            Render_array[exist_index].Count++;
+            console.log(Render_array[exist_index])
+            console.log(total);
+            saveDataToLocalStorage();
+            window.dispatchEvent(even);
+        }
+    }
+}
 function Insertproduct(index) {
     const a= `<div class="product_warper">
             <button class="close-btn" id="close-btn"><i class="fa-solid fa-x"></i></button>
@@ -173,13 +205,14 @@ function Insertproduct(index) {
                         ${products[index].descibe}
                         </p>
                         <h3>${products[index].price}</h3>
-                        <button>Mua</button>
+                        <button class="buy_btn">Mua</button>
                     </div>
                 </div>
             </div>
         </div>`;
         return a
 }
+
 // Xử lý giỏ hàng
 let array =JSON.parse(localStorage.getItem("array"))??[];
 let Render_array= JSON.parse(localStorage.getItem("cartItems"))??[];
@@ -190,76 +223,18 @@ const btn_click = document.querySelectorAll(".products-item button");
 function saveDataToLocalStorage() {
     localStorage.setItem("cartItems", JSON.stringify(Render_array));
     localStorage.setItem("array",JSON.stringify(array));
-    // localStorage.setItem("pay_check",total)
   }
   window.addEventListener('storage', function(event) {
     if (event.key === 'cartItems') {
         Render_array = JSON.parse(localStorage.getItem("cartItems"));
-        array = JSON.parse(this.localStorage.getItem("array"));
-    }
+        array=JSON.parse(localStorage.getItem("array"));
+   }
 });
 btn_click.forEach((button, index) => {
     button.addEventListener("click", () => {
         const value = image_click[index].getAttribute("data-value");
-        console.log(value);
-        window.alert(`Đã thêm sản phẩm ${index}`);
-        let inid = products.findIndex(product => product.id == value);
-        if(!array.includes(value)){
-            array.unshift(value);
-            let object= 
-                {
-                    "id":`${products[inid].id}`,
-                    "name":`${products[inid].name}`,
-                    "price":`${products[inid].price}`,
-                    "Count":1
-                }
-                console.log(typeof Render_array);
-            Render_array.unshift(object);
-            console.log(Render_array);
-            saveDataToLocalStorage();
-            window.dispatchEvent(even);
-        }
-        else{
-            let exist_index = array.findIndex(id => id===value);
-            if(exist_index!=-1){
-                console.log("đã tăng thêm sản phẩm")
-                Render_array[exist_index].Count++;
-                console.log(Render_array[exist_index])
-                console.log(total);
-                saveDataToLocalStorage();
-                window.dispatchEvent(even);
-            }
-        }
+        let innid = products.findIndex(product => product.id === value);
+        alert(`Đã thêm sản phẩm${index+1}`);
+        addList(value,innid);
     });
 });
-// function productDetailRender(index){
-//     return `
-//         <tr>
-//             <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (${Render_array[index].id}).jpg"></td>
-//             <td>
-//                 <p><span>${Render_array[index].id}</span><sup>đ</sup></p>
-//             </td>
-//             <td><input style="width: 30px;outline: none;" type="number" value="${Render_array[index].id}" min="1"></td>
-//             <td style="cursor: pointer;">Xóa</td>
-//         </tr>`;
-// }
-
-// function productDecrease(index) {
-//     if (Render_array[index]) {
-//         if (Render_array[index].Count > 1) {
-//             Render_array[index].Count--;
-//             console.log(Render_array[index].Count);
-//         } else {
-//             Render_array.splice(index, 1);
-//         }
-//         saveDataToLocalStorage();
-//     }
-// }
-// function PayMoneySum(){
-//     let sum = 0;
-//     Render_array.forEach(e => {
-//         let SumablePrice = parseInt(e.price.replace(/\D/g, ""));
-//         sum += e.Count * SumablePrice;
-//     });
-//     return sum.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".") + 'vnđ';
-// }

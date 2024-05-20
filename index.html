@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KUMA</title>
     <!-- link icon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/x8vxeraai2i61.png">
     <script src="https://kit.fontawesome.com/4da6ad9f64.js" crossorigin="anonymous"></script>
     <!-- embed font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,7 +25,7 @@
         <div class="menu">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="index.html">Trang chủ</a>
+                    <a href="index.html"><span style="text-decoration: underline;">Trang chủ</span></a>
                 </li>
                 <li class="menu__item">
                     <a href="product.html">Sản phẩm</a>
@@ -59,8 +60,8 @@
             <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
             <li>
                 <div style="display: flex;">
-                    <a href="login.html" class="item"><i class="fa-solid fa-user"></i></a>
-                    <div class="login" id="code">&nbsp Đăng nhập</div>
+                    <a href="login.html" class="item"><i class="fa-solid fa-user"></i>
+                    <div class="login" id="code">&nbsp <a href="login.html">Đăng nhập </a></div>
                 </div>
             </li>
             <li><a href="cart.html" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -355,7 +356,7 @@
                             </div> -->
                             <div class="footer-inner_info_content">
                                 <span class="footer-inner_info_title">Email</span>
-                                <p class="footer-inner-info_text1">thayhuycodeitthoi@gmail.com</p>
+                                <p class="footer-inner-info_text1">emsvsweetcan@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -392,6 +393,8 @@
 <script>
     const login = document.getElementById("code")
     const us = localStorage.getItem("username")
+    if(us){
     login.innerHTML = " " + us 
+    }
 </script>
 </html>
