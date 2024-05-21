@@ -161,6 +161,8 @@
 <script>
     const login = document.getElementById("code")
     const us = localStorage.getItem("username")
-    login.innerHTML = us
+    if(us){
+    login.innerHTML = " " + us 
+    }
 </script>
 </html>

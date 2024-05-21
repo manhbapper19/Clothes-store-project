@@ -62,11 +62,14 @@ function addEventListeners() {
 
     del_product.forEach((button, index) => {
         button.addEventListener('click', () => {
+          console.log("1")
             Render_array.splice(index, 1);
+            console.log(Render_array)
             array.splice(index, 1);
             saveDataToLocalStorage();
             document.querySelector(`tr[data-index="${index}"]`).remove();
-            updateTotal();
+            render();
+            // updateTotal();
         });
     });
 }

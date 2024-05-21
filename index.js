@@ -32,7 +32,7 @@ const products = [
         "id": "6",
         "name": "Áo phông nyan~",
         "descibe": "Chiếc áo mèo cute",
-        "price":"189.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "7",
@@ -44,91 +44,91 @@ const products = [
         "id": "11",
         "name": "Áo ba lỗ",
         "descibe": "Áo thoáng mát, phù hợp cho những người thích vận động nhưng vẫn có cá tính",
-        "price":"199.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "12",
         "name": "Áo thun nam",
         "descibe": "Áo thoáng mát, phù hợp cho những người thích vận động nhưng vẫn có cá tính",
-        "price":"199.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "13",
         "name": "Áo phông xanh",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"299.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "14",
         "name": "Áo polo trắng",
         "descibe": "Áo thoáng mát, phù hợp cho những doanh nhân trẻ",
-        "price":"199.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "16",
         "name": "Áo phông trắng",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"299.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "17",
         "name": "Áo ba lỗ",
         "descibe": "Áo ba lỗ thể thao, thích hợp cho việc vận động mạnh",
-        "price":"199.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "18",
         "name": "Áo polo S cafe",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp, không bị nhăn khi giặt",
-        "price":"499.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "15",
         "name": "Áo phông S",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"399.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "34",
         "name": "Áo chay",
         "descibe": "Áo thoáng mát, với chất liệu vải poly ester cao cấp",
-        "price":"399.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "65",
         "name": "Áo team whale",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"399.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "67",
         "name": "Áo ba lỗ",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"399.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "112",
         "name": "Áo ba lỗ",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"399.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "113",
         "name": "Áo chạy",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"399.000vnd"
+        "price":"149.000vnd"
     },
     {
         "id": "114",
         "name": "Áo phông gôm",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"599.000vnd"
+        "price":"1.599.000vnd"
     },
     {
         "id": "115",
         "name": "Áo ba lỗ sport",
         "descibe": "Áo thoáng mát, phù hợp với những nhà vô địch",
-        "price":"599.000vnd"
+        "price":"149.000vnd"
     },
 ];
 // Xử lý chi tiết sản phẩm 
