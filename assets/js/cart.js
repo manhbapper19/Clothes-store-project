@@ -86,3 +86,27 @@ window.addEventListener('storage', function(event) {
 });
 
 render();
+const shippingForm = document.getElementById('shipping-form');
+shippingForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+    const customerName = document.getElementById('customer-name').value.trim();
+    const customerAddress = document.getElementById('customer-address').value.trim();
+    const customerPhone = document.getElementById('customer-phone').value.trim();
+    const customerEmail = document.getElementById('customer-email').value.trim();
+
+    if (!customerName || !customerAddress || !customerPhone || !customerEmail) {
+        alert('Vui lòng điền đầy đủ thông tin vận chuyển.');
+    }
+    else if(Render_array.length!==0&&array.length!==0){
+      alert('Đã đặt hàng thành công');
+      Render_array=[];
+      array=[];
+      saveDataToLocalStorage();
+      console.log("hello")
+
+      window.location.href = "../index.html";
+    }
+    else{
+      alert("Bạn không có sản phẩm nào trong giỏ hàng");
+    }
+});

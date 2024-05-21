@@ -10,10 +10,7 @@
     <!-- embed font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -69,43 +66,54 @@
         </div>
     </header>
 
-    <!----------------------------Cart------------------------------>
-    <section class="cart">
-        <h2>Cart</h2>
-        <form action="">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Sản phẩm</th>
-                        <th>Giá</th>
-                        <th>Số Lượng</th>
-                        <th>Chọn</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <tr>
-                        <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (17).jpg"></td>
-                        <td>
-                            <p><span>149.000</span><sup>đ</sup></p>
-                        </td>
-                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
-                        <td style="cursor: pointer;">Xóa</td>
-                    </tr>
-                    <tr>
-                        <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (12).jpg"></td>
-                        <td>
-                            <p><span>149.000</span><sup>đ</sup></p>
-                        </td>
-                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
-                        <td style="cursor: pointer;">Xóa</td>
-                    </tr> -->
-                </tbody>
-            </table>
-            <div style="text-align: right;" class="price-total">
-                <p style="font-weight: bold;">Tổng tiền:<span id="money"></span><sup></p>
-            </div>
-        </form>
-    </section>
+    <!----------------------------Main Section------------------------------>
+    <main class="main-section">
+        <section class="cart">
+            <h2>Giỏ hàng</h2>
+            <form action="">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số Lượng</th>
+                            <th>Chọn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Product items will be dynamically generated here -->
+                    </tbody>
+                </table>
+                <div style="text-align: right;" class="price-total">
+                    <p style="font-weight: bold;">Tổng tiền:<span id="money"></span><sup>đ</sup></p>
+                </div>
+            </form>
+        </section>
+
+        <!------------------------- Shipping Information -------------------------->
+        <section class="shipping-info">
+            <h2>Thông tin vận chuyển</h2>
+            <form id="shipping-form">
+                <div class="form-group">
+                    <label for="customer-name">Họ Tên</label>
+                    <input type="text" id="customer-name" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Địa chỉ</label>
+                    <input type="text" id="customer-address" name="customerAddress" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Số điện thoại</label>
+                    <input type="tel" id="customer-phone" name="customerPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-email">Email</label>
+                    <input type="email" id="customer-email" name="customerEmail" required>
+                </div>
+                <button type="submit">Thanh Toán</button>
+            </form>
+        </section>
+    </main>
 
     <!------------------------ Footer ---------------------------->
     <footer class="footer">
@@ -114,15 +122,11 @@
                 <div class="footer-inner_sidebar">
                     <div>
                         <h4 class="footer-inner_title">KUMA lắng nghe bạn!</h4>
-                        <p class="footer-inner_text">Chúng tôi luôn trân trọng và mong đợi được nhận mọi ý kiến đóng góp
-                            từ khách hàng để nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa</p>
+                        <p class="footer-inner_text">Chúng tôi luôn trân trọng và mong đợi được nhận mọi ý kiến đóng góp từ khách hàng để nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa</p>
                         <a href="" class="footer-inner_btn">Đóng góp ý kiến</a>
                     </div>
                     <div style="width: 25%">
                         <div class="footer-inner_info">
-                            <!-- <div class="footer-inner_info_icon">
-                                <img src="assets/icon/icon-hotline.svg" alt="">
-                            </div> -->
                             <div class="footer-inner_info_content">
                                 <span class="footer-inner_info_title">Hotline</span>
                                 <p class="footer-inner-info_text">
@@ -133,32 +137,23 @@
                             </div>
                         </div>
                         <div class="footer-inner_info">
-                            <!-- <div class="footer-inner_info_icon">
-                                <img src="assets/icon/icon-email.svg" alt="">
-                            </div> -->
                             <div class="footer-inner_info_content">
                                 <span class="footer-inner_info_title">Email</span>
                                 <p class="footer-inner-info_text1">thayhuycodeitthoi@gmail.com</p>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="social">
-                        <img class="social-item" id="social-item1" src="assets/icon/fb.png" alt="">
-                        <img class="social-item" src="assets/icon/tiktok.png" alt="">
-                    </div> -->
                 </div>
-                <!-- <div class="footer-inner-menu">
-    
-                        </div> -->
             </div>
         </div>
     </footer>
 
-    </body>
     <script src="assets/js/cart.js"></script>
     <script>
-        const login = document.getElementById("code")
-        const us = localStorage.getItem("username")
-        login.innerHTML = us
+        const login = document.getElementById("code");
+        const us = localStorage.getItem("username");
+        login.innerHTML = us;
     </script>
+</body>
+
 </html>

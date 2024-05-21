@@ -1,151 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container2 .imgBx {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    background: #212121;
-    transition: .3s linear;
-}
-
-.container2 .imgBx:before {
-    content: 'Nike';
-    position: absolute;
-    top: 0px;
-    left: 24px;
-    color: #000;
-    opacity: 0.2;
-    font-size: 8em;
-    font-weight: 800;
-}
-
-.container2 .imgBx img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: .9s linear;
-    object-fit: cover;
-}
-
-.container2 .details {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 40px;
-}
-
-.container2 .details h2{
-    margin: 0;
-    padding: 0;
-    font-size: 2.4em;
-    line-height: 1em;
-    color: #444;
-}
-
-.container2 .details h2 span {
-    font-size: 0.4em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #999;
-}
-
-.container2 .details p {
-    max-width: 85%;
-    margin-left: 15%;
-    color: #333;
-    font-size: 15px;
-    margin-bottom: 36px;
-}
-
-.container2 .details h3 {
-    margin: 0;
-    padding: 0;
-    font-size: 2.5em;
-    color: #a2a2a2;
-    float: left;
-}
-.container2 .details button {
-    background: #000;
-    color: #fff;
-    border: none;
-    outline: none;
-    padding: 15px 20px;
-    margin-top: 5px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-weight: 600;
-    border-radius: 40px;
-    float: right;
-    cursor: pointer;
-    transition: all 0.3;
-}
-.container2 .details button:hover {
-  background: #d9d9d9;
-  color: #000
-}
-.product-display {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-}
-.product_warper{
-  padding: 50px 20%;
-  border-radius: 18px;
-  background-color: hsla(0, 100%, 90%, 0.3);;
-}
-.close-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    align-items: flex-start;
-    cursor: pointer;
-    color: #000;
-    background: none;
-    border: none;
-}
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KUMA</title>
+    <!-- link icon -->
+    <script src="https://kit.fontawesome.com/4da6ad9f64.js" crossorigin="anonymous"></script>
+    <!-- embed font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-</main>
-<main class="product-display">
-    <div class="product_warper">
-        <button class="close-btn" id="close-btn">X</button>
-    <div class="container2">
-        <div class="imgBx">
-            <img src="assets/img/23CMAW.TT004.3D.1_15.jpg">
+    <!---------------------------Header------------------------------>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png">
         </div>
-        <div class="details">
-            <div class="content">
-                <h2>Áo ba lỗ <br>
-                    <span>Running Collection</span>
-                </h2>
-                <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-                </p>
-                <!-- <p class="product-colors">Available Colors:
-                    <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
-                    <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
-                    <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
-                </p> -->
-                <h3>140.000đ</h3>
-                <button>Mua</button>
+        <div class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="index.html">Trang chủ</a>
+                </li>
+                <li class="menu__item">
+                    <a href="product.html">Sản phẩm</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Nam</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Hàng mới về</a></li>
+                                <li><a href="">Áo</a></li>
+                                <li><a href="">Quần</a></li>
+                                <li><a href="">Sale</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Nữ</a>
+                            <ul class="sub-menu">
+                                <li><a href="">Hàng mới về</a></li>
+                                <li><a href="">Áo</a></li>
+                                <li><a href="">Quần</a></li>
+                                <li><a href="">Sale</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="menu__item">
+                    <a href="introduce.html">Giới thiệu</a>
+                </li>
+                <li class="menu__item"><a href="blog.html">Blog</a></li>
+                <!-- <li class="menu__item"><a href="#!">Liên hệ</a></li> -->
+            </ul>
+        </div>
+        <div class="other">
+            <li><input placeholder="Tìm kiếm" type="text"><i class="fa-solid fa-magnifying-glass"></i></li>
+            <li>
+                <div style="display: flex;">
+                    <a href="login.html" class="item"><i class="fa-solid fa-user"></i></a>
+                    <div class="login" id="code">&nbsp Đăng nhập</div>
+                </div>
+            </li>
+            <li><a href="#!" class="item"><i class="fa-solid fa-cart-shopping"></i></a></li>
+        </div>
+    </header>
+
+    <!----------------------------Cart------------------------------>
+    <section class="cart">
+        <h2>Cart</h2>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (17).jpg"></td>
+                        <td>
+                            <p><span>149.000</span><sup>đ</sup></p>
+                        </td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display: flex;align-items: center;"><img style="width: 70px;" src="assets/img/cool/p (12).jpg"></td>
+                        <td>
+                            <p><span>149.000</span><sup>đ</sup></p>
+                        </td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div style="text-align: right;" class="price-total">
+                <p style="font-weight: bold;">Tổng tiền:<span id="money"></span><sup></p>
+            </div>
+        </form>
+    </section>
+
+    <!------------------------ Footer ---------------------------->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-inner_sidebar">
+                    <div>
+                        <h4 class="footer-inner_title">KUMA lắng nghe bạn!</h4>
+                        <p class="footer-inner_text">Chúng tôi luôn trân trọng và mong đợi được nhận mọi ý kiến đóng góp
+                            từ khách hàng để nâng cấp trải nghiệm dịch vụ và sản phẩm tốt hơn nữa</p>
+                        <a href="" class="footer-inner_btn">Đóng góp ý kiến</a>
+                    </div>
+                    <div style="width: 25%">
+                        <div class="footer-inner_info">
+                            <!-- <div class="footer-inner_info_icon">
+                                <img src="assets/icon/icon-hotline.svg" alt="">
+                            </div> -->
+                            <div class="footer-inner_info_content">
+                                <span class="footer-inner_info_title">Hotline</span>
+                                <p class="footer-inner-info_text">
+                                    <a href="tel: 1900.1000"><br>1900.1000</a> -
+                                    <a href="tel: 0347925972">034.925.972</a>
+                                    <span><br>(9:00 - 22:00)</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="footer-inner_info">
+                            <!-- <div class="footer-inner_info_icon">
+                                <img src="assets/icon/icon-email.svg" alt="">
+                            </div> -->
+                            <div class="footer-inner_info_content">
+                                <span class="footer-inner_info_title">Email</span>
+                                <p class="footer-inner-info_text1">thayhuycodeitthoi@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="social">
+                        <img class="social-item" id="social-item1" src="assets/icon/fb.png" alt="">
+                        <img class="social-item" src="assets/icon/tiktok.png" alt="">
+                    </div> -->
+                </div>
+                <!-- <div class="footer-inner-menu">
+    
+                        </div> -->
             </div>
         </div>
-    </div>
-</div> 
-</main>   
-</body>
+    </footer>
+
+    </body>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        const login = document.getElementById("code")
+        const us = localStorage.getItem("username")
+        login.innerHTML = us
+    </script>
 </html>

@@ -234,7 +234,7 @@ btn_click.forEach((button, index) => {
     button.addEventListener("click", () => {
         const value = image_click[index].getAttribute("data-value");
         let innid = products.findIndex(product => product.id === value);
-        alert(`Đã thêm sản phẩm${index+1}`);
+        alert(`Đã thêm sản phẩm thứ ${index+1}`);
         addList(value,innid);
     });
 });
